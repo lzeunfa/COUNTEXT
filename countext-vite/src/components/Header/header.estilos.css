@@ -1,29 +1,33 @@
 header{
-    padding: 10px;
+    padding: 15px;
 
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.54);
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.337);
 
     background-color: white;
 
-    width: 100%;
+    width: 100vw;
 }
 
-div{
+.headerContainer{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    max-width: 900px;
+
+    margin: 0 auto;
 }
 
 .imgLogo{
     width: 200px;
 }
 
-i{
+.iconTheme{
     color: white;
 
     font-size: 1.5em;
 
-    background-color: black;
+    background-color: #1582B4;
 
     border-radius: 10px;
 
@@ -35,7 +39,7 @@ i{
     background-color: black;
 }
 
-i:hover{
+.iconTheme:hover{
     cursor: pointer;
 
     opacity: .6;

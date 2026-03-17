@@ -1,17 +1,19 @@
 import './header.estilos.css';
 import { Image } from "../Imagem";
+import { Container } from '../Container';
 
 export function Header(){
     return(
 
         <header>
 
-            <div>
-
-                <Image className='imgLogo' src='logo.png' alt='logo countext'/>
-                <i class="fa-solid fa-sun"></i>
+            <Container className='headerContainer'>
                 
-            </div>
+                <Image className='imgLogo' src='logo.png' alt='logo countext'/>
+                <i className="fa-solid fa-sun iconTheme"></i>
+
+            </Container>
+            
 
         </header>
 
