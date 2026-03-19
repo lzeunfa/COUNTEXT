@@ -1,4 +1,4 @@
-import './header.estilos.css';
+import './header.style.css';
 import { Image } from "../Imagem";
 import { Container } from '../Container';
 
