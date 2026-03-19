@@ -1,0 +1,30 @@
+.textArea{
+    background-color: #ebebeb;
+
+    border: none;
+    border-radius: 10px;
+
+    box-shadow: 1px 1px 10px #20898560;
+
+    width: 90%;
+    max-width: 900px;
+
+    height: 200px;
+
+    padding: 10px;
+
+    resize: none;
+
+    font-weight: 700;
+    font-size: 16px;
+
+    text-align: center;
+
+    margin-bottom: 15px;
+}
+
+.textArea:focus{
+    outline: none;
+
+    box-shadow: 1px 1px 10px #20898591;
+}
