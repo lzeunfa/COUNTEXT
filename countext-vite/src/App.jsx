@@ -2,6 +2,7 @@ import './App.css';
 import { Header } from './components/Header';
 import { Titulo } from './components/Titulo';
 import { ContainerTextArea } from './components/ContainerTextArea';
+import { ContainerCards } from './components/ContainerCards';
 
 function App() {
 
@@ -14,6 +15,8 @@ function App() {
       <Titulo>Analise seu texto em <br/> tempo real!</Titulo>
 
       <ContainerTextArea></ContainerTextArea>
+
+      <ContainerCards/>
 
     </main>
 
