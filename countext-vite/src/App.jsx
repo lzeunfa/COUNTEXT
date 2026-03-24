@@ -3,6 +3,7 @@ import { Header } from './components/Header';
 import { Titulo } from './components/Titulo';
 import { ContainerTextArea } from './components/ContainerTextArea';
 import { ContainerCards } from './components/ContainerCards';
+import { ContainerDensidade } from './components/ContainerDensidade';
 
 function App() {
 
@@ -17,6 +18,8 @@ function App() {
       <ContainerTextArea></ContainerTextArea>
 
       <ContainerCards/>
+
+      <ContainerDensidade/>
 
     </main>
 
