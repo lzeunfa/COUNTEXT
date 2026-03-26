@@ -4,24 +4,34 @@ import { Titulo } from './components/Titulo';
 import { ContainerTextArea } from './components/ContainerTextArea';
 import { ContainerCards } from './components/ContainerCards';
 import { ContainerDensidade } from './components/ContainerDensidade';
+import { Footer } from './components/Footer';
 
 function App() {
 
   return (
     
-    <main>
+    <>
 
       <Header></Header>
 
-      <Titulo>Analise seu texto em <br/> tempo real!</Titulo>
+      <main>
+        
 
-      <ContainerTextArea></ContainerTextArea>
+        <Titulo>Analise seu texto em <br/> tempo real!</Titulo>
 
-      <ContainerCards/>
+        <ContainerTextArea></ContainerTextArea>
 
-      <ContainerDensidade/>
+        <ContainerCards/>
 
-    </main>
+        <ContainerDensidade/>
+
+        
+
+      </main>
+
+      <Footer/>
+
+    </>
 
   )
 

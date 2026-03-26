@@ -17,7 +17,7 @@ export function ContainerDensidade(){
                         <Container key={index} className='containerPorcentos'>
                             <p>{letra}</p>
                             <Container className='barraPorcento'>
-
+                                <div className='preenchimentoBarra'></div>
                             </Container>
                             <p>QTD(X%)</p>
                         </Container>
