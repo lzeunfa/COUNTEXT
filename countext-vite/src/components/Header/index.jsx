@@ -1,16 +1,21 @@
 import './header.style.css';
 import { Image } from "../Imagem";
 import { Container } from '../Container';
+import TemaContext from '../TemaProvider/TemaContext';
+import { use } from 'react';
 
 export function Header(){
+
+    const {toggleTema,tema} = use(TemaContext);
+
     return(
 
-        <header>
+        <header className={`${tema}Header header`}>
 
-            <Container className='headerContainer'>
+            <Container className='headerContainer d-flex justify-content-between align-items-center'>
                 
                 <Image className='imgLogo' src='logo.png' alt='logo countext'/>
-                <i className="fa-solid fa-sun iconTheme"></i>
+                <i className={`fa-solid fa-sun iconTheme i${tema}`} onClick={() => toggleTema()}></i>
 
             </Container>
             

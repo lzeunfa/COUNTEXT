@@ -11,7 +11,7 @@ html,body{
 }
 
 body{
-    background-color: rgb(251, 251, 251);
+    background-color: rgb(251, 251, 251) !important;
 
     min-height: 100vh;
 }
@@ -26,4 +26,16 @@ main{
     flex: 1;
     display: flex;
     flex-direction: column;
+}
+
+.light{
+    background-color: rgb(251, 251, 251);
+
+    color: rgba(9, 3, 21, 0.578);
+}
+
+.dark{
+    background-color: #0c101d;
+
+    color: white;
 }

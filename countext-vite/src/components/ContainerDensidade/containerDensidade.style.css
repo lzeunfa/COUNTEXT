@@ -1,8 +1,4 @@
 .containerAreaDensidade{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-
     width: 100%;
 }
 
@@ -16,15 +12,7 @@
 }
 
 .containerPorcentos{
-    display: flex;
-    justify-content: space-between;
-
-    margin-bottom: 15px;
-
-    padding: 10px;
-
     max-width: 900px;
-
 }
 
 .barraPorcento{
@@ -44,4 +32,12 @@
     width: 50%;
     height: 100%;
     background-color: #68a4ff7d;
+}
+
+.plight{
+    color: black;
+}
+
+.pdark{
+    color: white;
 }

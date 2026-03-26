@@ -7,7 +7,7 @@ export function ContainerCards(){
     const subTiTleStyle = ['cardCaracteres', 'cardPalavras', 'cardSentencas'];
 
     return(
-        <Section className='containerCards'>
+        <Section className='containerCards d-flex flex-wrap justify-content-center'>
 
             {subTitles.map((subs,index) => {
                 return <Cards key={index} subTitle={subs} subTitleClass={subTiTleStyle[index]+' '+'cards'}/>

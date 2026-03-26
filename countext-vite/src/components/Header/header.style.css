@@ -1,18 +1,20 @@
-header{
+.header{
     padding: 15px;
-
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.337);
-
-    background-color: white;
 
     width: 100%;
 }
 
-.headerContainer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.darkHeader{
+    background-color: #101525;
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.101));
+}
 
+.lightHeader{
+    background-color: white;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.14));
+}
+
+.headerContainer{
     max-width: 900px;
 
     margin: 0 auto;
@@ -23,20 +25,21 @@ header{
 }
 
 .iconTheme{
-    color: white;
-
     font-size: 1.5em;
-
-    background-color: #1582B4;
 
     border-radius: 10px;
 
     padding: 5px;
 }
 
-.iLight{
+.ilight{
     color: white;
-    background-color: black;
+    background-color: #1582B4;
+}
+
+.idark{
+    color: #1582B4;
+    background-color: white;
 }
 
 .iconTheme:hover{
