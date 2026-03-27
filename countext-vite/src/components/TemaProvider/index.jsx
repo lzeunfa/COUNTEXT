@@ -12,6 +12,7 @@ export function CountextProvider({children}){
         setTema((prevTema) => (prevTema === 'light' ? 'dark' : 'light'));
     }
 
+    //atualiza o background color do body
     useEffect(() =>{
 
             if(tema === 'light'){

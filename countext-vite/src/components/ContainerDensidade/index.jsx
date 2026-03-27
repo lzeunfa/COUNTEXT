@@ -15,7 +15,7 @@ export function ContainerDensidade(){
 
             <Container className='containerEnvelopador'>
 
-                <h1 className='text-center'>Densidade de letras</h1>
+                <h1 className='text-center pb-3 pt-2'>Densidade de letras</h1>
 
                 {letrasPresentes.map( (letra, index) => {
 
