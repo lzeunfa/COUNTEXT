@@ -21,7 +21,7 @@ export function CountextProvider({children}){
                 document.body.style.backgroundColor = '#101525';
             }
             
-        },[]);
+        },[tema]);
 
     return(
         <TemaContext value={{tema , toggleTema}}>
