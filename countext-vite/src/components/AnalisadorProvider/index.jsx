@@ -15,13 +15,24 @@ export function AnalisadorProvider({ children }){
     const changeTexto = (valor) =>{
         setTexto(valor);
         setTextoExibido(valor);
-    }
+    };
 
-    //funcao para calcular a qtd total de letras apartir da contagem geral de caracteres
-    const qtdLetras = () =>{
-        const qtdTotalLetras = contaCaracter().replace(/[\.,;:\?!…\s]/g, '');
+    const densidadeTexto = () => {
+        const letrasLimpas = texto.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f\u0327\s\p{P}\p{S}]/gu, "");
 
-        return qtdTotalLetras.length;
+        const densidadeLetras = {};
+        for(const letra of letrasLimpas){
+            densidadeLetras[letra] = (densidadeLetras[letra] || 0) + 1;
+        }
+
+        const resultado = Object.entries(densidadeLetras)
+            .map(([letra, quantidade]) => ({
+                letra,
+                quantidade,
+                percentual: ((quantidade / letrasLimpas.length) * 100).toFixed(1)
+            })).sort((a, b) => b.quantidade - a.quantidade);
+
+        return resultado;
     }
 
     //funcao para contagem de caracteres
@@ -41,14 +52,14 @@ export function AnalisadorProvider({ children }){
         const palavras = texto.trim().split(/\s+/);
 
         return palavras.length;
-    }
+    };
 
     //funcao para contagem de sentencas
     const contaSentencas = () =>{
         const sentencas = (textoExibido.match(/[.!?]/g) || []).length;
 
         return sentencas;
-    }
+    };
 
     //troca de estados do checkbox
     const toggleCheck = () => {
@@ -60,11 +71,11 @@ export function AnalisadorProvider({ children }){
             return novoEstado;
         });
 
-    }
+    };
 
     return(
         //passando as funcoes no value para uso de contexto
-        <AnalisadorContext value={{contaCaracter, contaPalavras, contaSentencas, toggleCheck, isChecked, changeTexto, textoExibido}}>
+        <AnalisadorContext value={{contaCaracter, contaPalavras, contaSentencas, toggleCheck, isChecked, changeTexto,densidadeTexto, textoExibido}}>
             {children}
         </AnalisadorContext>
     )

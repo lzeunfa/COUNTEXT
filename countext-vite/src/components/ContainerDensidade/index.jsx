@@ -3,16 +3,17 @@ import { Container } from '../Container';
 import { Section } from '../Section';
 import { use } from 'react';
 import TemaContext from '../TemaProvider/TemaContext';
+import AnalisadorContext from '../AnalisadorProvider/AnalisadorContext';
 
 export function ContainerDensidade(){
     //ciar logica no analisador provider para coletar as letras e quantidade e jogar para um arr de letras e um objeto chave letrar valor letra e chave quantidade valor quantidade
 
     //pegar quantidade total de caracteres retirando espaços e pontuacoes para calcular as densidades
 
-
-    const letrasPresentes = ['E','B','F']
-
     const {tema} = use(TemaContext);
+    const {densidadeTexto} = use(AnalisadorContext);
+
+    let letrasPresentes = densidadeTexto();
 
     return(
         <Section className='containerAreaDensidade d-flex justify-content-center'>
@@ -26,13 +27,13 @@ export function ContainerDensidade(){
                     return(
                         <Container key={index} className='containerPorcentos d-flex justify-content-between'>
 
-                            <p className={`p${tema}`}>{letra}</p>
+                            <pre className={`p${tema} p`}>{letra.letra}</pre>
                             
                             <Container className='barraPorcento'>
-                                <div className='preenchimentoBarra'></div>
+                                <div className='preenchimentoBarra' style={{ width: `${letra.percentual}%` }}></div>
                             </Container>
 
-                            <p className={`p${tema}`}>QTD(X%)</p>
+                            <pre className={`p${tema} p`}>{letra.quantidade > 9.99 ? letra.quantidade : `0${letra.quantidade}`}({letra.percentual > 9.99 ? letra.percentual : `0${letra.percentual}`}%)</pre>
 
                         </Container>
                     )
