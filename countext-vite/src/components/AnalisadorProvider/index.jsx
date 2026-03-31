@@ -11,9 +11,17 @@ export function AnalisadorProvider({ children }){
     //use state para armazenar estado checkbox
     const [isChecked, setIsChecked] = useState(false);
 
+    //atualiza os estados de texto, orignal e exibido
     const changeTexto = (valor) =>{
         setTexto(valor);
         setTextoExibido(valor);
+    }
+
+    //funcao para calcular a qtd total de letras apartir da contagem geral de caracteres
+    const qtdLetras = () =>{
+        const qtdTotalLetras = contaCaracter().replace(/[\.,;:\?!…\s]/g, '');
+
+        return qtdTotalLetras.length;
     }
 
     //funcao para contagem de caracteres
