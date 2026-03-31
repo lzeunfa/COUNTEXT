@@ -5,6 +5,10 @@ import { use } from 'react';
 import TemaContext from '../TemaProvider/TemaContext';
 
 export function ContainerDensidade(){
+    //ciar logica no analisador provider para coletar as letras e quantidade e jogar para um arr de letras e um objeto chave letrar valor letra e chave quantidade valor quantidade
+
+    //pegar quantidade total de caracteres retirando espaços e pontuacoes para calcular as densidades
+
 
     const letrasPresentes = ['E','B','F']
 
