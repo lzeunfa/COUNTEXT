@@ -11,20 +11,25 @@ export function AnalisadorProvider({ children }){
     //use state para armazenar estado checkbox
     const [isChecked, setIsChecked] = useState(false);
 
-    //atualiza os estados de texto, orignal e exibido
+    //atualiza os estados de texto, original e exibido
     const changeTexto = (valor) =>{
         setTexto(valor);
         setTextoExibido(valor);
     };
 
+    //analisador da densidade do texto
     const densidadeTexto = () => {
+
+        //variavel que recebe apenas as letras do texto
         const letrasLimpas = texto.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f\u0327\s\p{P}\p{S}]/gu, "");
 
+        //objeto par chave letra valor quantidade de ocorrencias
         const densidadeLetras = {};
         for(const letra of letrasLimpas){
             densidadeLetras[letra] = (densidadeLetras[letra] || 0) + 1;
         }
 
+        //transforma o objeto em array e passa pro resultado um novo objeto que recebe a letra, quantidade e percentual
         const resultado = Object.entries(densidadeLetras)
             .map(([letra, quantidade]) => ({
                 letra,

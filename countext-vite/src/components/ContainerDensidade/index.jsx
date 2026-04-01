@@ -6,13 +6,11 @@ import TemaContext from '../TemaProvider/TemaContext';
 import AnalisadorContext from '../AnalisadorProvider/AnalisadorContext';
 
 export function ContainerDensidade(){
-    //ciar logica no analisador provider para coletar as letras e quantidade e jogar para um arr de letras e um objeto chave letrar valor letra e chave quantidade valor quantidade
-
-    //pegar quantidade total de caracteres retirando espaços e pontuacoes para calcular as densidades
 
     const {tema} = use(TemaContext);
     const {densidadeTexto} = use(AnalisadorContext);
 
+    //variavel que recebe o array de objetos com a densidade do texto
     let letrasPresentes = densidadeTexto();
 
     return(
@@ -22,7 +20,9 @@ export function ContainerDensidade(){
 
                 <h1 className='text-center pb-3 pt-2'>Densidade de letras</h1>
 
-                {letrasPresentes.map( (letra, index) => {
+                
+                {/*criacao das tags para mostrar os dados da densidade do texto, acessando as propriedades da variavel que recebeu o arr de objetos sobre a densidade*/
+                letrasPresentes.map( (letra, index) => {
 
                     return(
                         <Container key={index} className='containerPorcentos d-flex justify-content-between'>

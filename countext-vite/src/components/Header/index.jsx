@@ -14,7 +14,9 @@ export function Header(){
 
             <Container className='headerContainer d-flex justify-content-between align-items-center'>
                 
-                <Image className='imgLogo' src='logo.png' alt='logo countext'/>
+                <figure className='m-0'>
+                    <Image className='imgLogo' src='logo.png' alt='logo countext'/>
+                </figure>
                 <i className={`fa-solid fa-sun iconTheme i${tema}`} onClick={() => toggleTema()}></i>
 
             </Container>
