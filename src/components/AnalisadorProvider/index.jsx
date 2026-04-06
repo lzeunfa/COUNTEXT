@@ -21,7 +21,7 @@ export function AnalisadorProvider({ children }){
     const densidadeTexto = () => {
 
         //variavel que recebe apenas as letras do texto
-        const letrasLimpas = texto.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f\u0327\s\p{P}\p{S}]/gu, "");
+        const letrasLimpas = texto.toUpperCase().normalize('NFD').replace(/[\u0300-\u036f\u0327\s\p{P}\p{S}0-9]/gu, "");
 
         //objeto par chave letra valor quantidade de ocorrencias
         const densidadeLetras = {};
